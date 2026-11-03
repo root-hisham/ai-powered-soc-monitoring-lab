@@ -1,0 +1,24 @@
+# Analysis results — your own stored alerts/results, never pushed to GitHub
+/data/
+*.db
+*.db-journal
+
+# Secrets — SSH keys, passwords, anything private. None of these should ever
+# exist inside this project folder; this is a safety net, not a substitute
+# for keeping them in ~/.ssh and environment variables.
+*.pem
+*_rsa
+*_ed25519
+soc_reader
+soc_reader.pub
+.env
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+*.swp

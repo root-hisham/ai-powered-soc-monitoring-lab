@@ -1,0 +1,76 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.10.27",
+  "_id": "MQW1fKEBjWI3kSAyZd__",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "predecoder": {
+      "hostname": "ubundu1",
+      "program_name": "sshd-session",
+      "timestamp": "Oct 27 09:33:43"
+    },
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "10.0.3.7",
+      "name": "ubundu1",
+      "id": "001"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "data": {
+      "srcip": "10.0.3.4",
+      "dstuser": "testuser",
+      "srcport": "60198"
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": true,
+      "level": 14,
+      "description": "Possible SSH brute force success: testuser logged in from 10.0.3.4 after multiple failure",
+      "groups": [
+        "local",
+        "syslog",
+        "sshd"
+      ],
+      "mitre": {
+        "technique": [
+          "Brute Force"
+        ],
+        "id": [
+          "T1110"
+        ],
+        "tactic": [
+          "Credential Access"
+        ]
+      },
+      "id": "100100"
+    },
+    "location": "journald",
+    "decoder": {
+      "parent": "sshd",
+      "name": "sshd"
+    },
+    "id": "1793093624.1344612",
+    "full_log": "Oct 27 09:33:43 ubundu1 sshd-session[10638]: Accepted password for testuser from 10.0.3.4 port 60198 ssh2",
+    "timestamp": "2026-10-27T09:33:44.235+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-10-27T09:33:44.235Z"
+    ]
+  },
+  "highlight": {
+    "rule.id": [
+      "@opensearch-dashboards-highlighted-field@100100@/opensearch-dashboards-highlighted-field@"
+    ],
+    "manager.name": [
+      "@opensearch-dashboards-highlighted-field@wazuh-server@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1793093624235
+  ]
+}
